@@ -1,5 +1,8 @@
-$rojo: red;
+
+//vieja sintaxis
+@import 'base/variables';
+@import 'contenido/contenido';
 
 body{
-    background-color: rebeccapurple;
+    background-color: $rojo;
 }
