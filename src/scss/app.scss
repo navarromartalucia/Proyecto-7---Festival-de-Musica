@@ -1,8 +1,8 @@
 
 //vieja sintaxis
 @import 'base/variables';
+@import 'base/normalize';
 @import 'contenido/contenido';
-
-body{
-    background-color: $rojo;
-}
+@import 'base/globales';
+@import 'layout/header';
+@import 'base/mixins';
