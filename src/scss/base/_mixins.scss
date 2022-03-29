@@ -1,6 +1,23 @@
-@mixin heading {
-    text-transform: uppercase;
-    font-size: 2.4rem;
-    color: $negro;
-    letter-spacing: 1px;
+@mixin phone{
+    @media (min-width: $telefono) {
+        @content;
+    }
+}
+
+@mixin tablet{
+    @media (min-width:$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media (min-width:$desktop) {
+        @content;
+    }
+}
+
+@mixin deskptopXL{
+    @media (min-width:$desktopXL) {
+        @content;
+    }
 }
