@@ -347,13 +347,14 @@ html {
 }
 
 body {
-  font-family: "Monserrat", sans-serif;
+  font-family: "Monserrat", arial;
   font-size: 1.6rem;
 }
 
 p {
   font-size: 2rem;
   color: #000;
+  line-height: 1.5;
 }
 
 .contenedor {
@@ -380,6 +381,11 @@ h2 {
 
 h3 {
   font-size: 3rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
 }
 
 .header {
@@ -431,6 +437,7 @@ h3 {
 .video {
   position: relative;
   max-height: 70rem;
+  min-height: 50rem;
   overflow: hidden;
 }
 .video .overlay {
@@ -444,8 +451,13 @@ h3 {
   justify-content: center;
 }
 .video video {
-  width: 100%;
+  width: auto;
   display: block;
+}
+@media (min-width: 992px) {
+  .video video {
+    width: 100%;
+  }
 }
 
 .contenido-video {
@@ -462,4 +474,35 @@ h3 {
   padding: 1rem 2rem;
   color: #FFF;
   font-size: 2.4rem;
+  margin: 0;
+}
+
+.sobre-festival {
+  padding: 5rem 0;
+}
+@media (min-width: 768px) {
+  .sobre-festival {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+
+.contenido-festival {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5rem;
+}
+@media (min-width: 768px) {
+  .contenido-festival {
+    margin-top: 0;
+  }
+}
+.contenido-festival h2 {
+  margin-bottom: 2rem;
+}
+.contenido-festival .fecha {
+  color: #F53756;
+  font-weight: 700;
 }
