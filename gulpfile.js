@@ -1,4 +1,4 @@
-const { src, dest, watch } = require('gulp');
+const { src, dest, watch, parallel } = require('gulp');
 
 //Imagenes
 const webp = require('gulp-webp');
@@ -28,14 +28,21 @@ function versionWebp (done){
     done();
 }
 
+function javaScript(done){
+    src('src/js/**/*.js')
+        .pipe(dest('build/js'));
+    done();
+}
 
 
 //un watch para que este leyendo los cambios que sucedan en este archivo y los compile automaticamente
 function dev (done){
     watch('src/scss/**/*.scss', css);
+    watch('src/js/**/*.js', javaScript);
     done ();
 }
 
 exports.versionWebp = versionWebp;
+exports.js = javaScript;
 exports.css = css;
-exports.dev = dev;
+exports.dev = parallel (dev, javaScript);
