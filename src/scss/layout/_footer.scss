@@ -1,0 +1,12 @@
+@import 'base/mixins';
+
+.site-footer{
+    background-color: $rosa;
+    padding: 1rem;
+    p{
+        margin: 0;
+        color: $blanco;
+        text-align: center;
+        font-size: 1.7rem;
+    }
+}
